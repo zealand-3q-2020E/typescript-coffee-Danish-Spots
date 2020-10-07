@@ -13,4 +13,8 @@ export abstract class Coffee{
     }
 
     public abstract CoffeeDrink(): string;
+
+    public GetCoffeeString(): string{
+        return "Discount: " + this.Discount + ", Price: " + this.Price() + ", Strength: " + this.Strength();
+    }
 }

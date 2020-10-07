@@ -22,4 +22,8 @@ export class Cortado extends Coffee implements IMilk{
     public Strength(): string{
         return "Weak";
     }
+
+    public GetCoffeeString(): string{
+        return "Discount: " + this.Discount + ", Price: " + this.Price() + ", Strength: " + this.Strength() + ", MlMilk: " + this.MlMilk();
+    }
 }
