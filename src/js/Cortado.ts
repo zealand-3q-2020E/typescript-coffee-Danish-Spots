@@ -2,6 +2,10 @@ import { Coffee } from "./Coffee"
 import { IMilk } from "./IMilk";
 
 export class Cortado extends Coffee implements IMilk{
+    
+    public CoffeeDrink(): string {
+       return "Cortado"
+    }
 
     constructor(){
         super(0);

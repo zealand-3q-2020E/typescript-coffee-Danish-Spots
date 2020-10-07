@@ -12,4 +12,5 @@ export abstract class Coffee{
         return "Mild";
     }
 
+    public abstract CoffeeDrink(): string;
 }
