@@ -13,3 +13,20 @@ h2
 h1{
     @extend h2;
 }
+
+.orderButton{
+    padding: 3px;
+    margin-left: 10px;
+}
+
+table{
+    padding: 10px;
+    width: 800px;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid darkgray;
+    text-align: left;
+    padding-left: 8px;
+}
