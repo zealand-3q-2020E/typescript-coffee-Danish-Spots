@@ -3,9 +3,8 @@ import { IMilk } from "./IMilk";
 
 export class Cortado extends Coffee implements IMilk{
 
-    constructor(discount: number){
-        super(discount);
-
+    constructor(){
+        super(0);
     }
 
     MlMilk(): number {

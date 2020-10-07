@@ -3,8 +3,8 @@ import { IMilk } from "./IMilk";
 
 export class Latte extends Coffee implements IMilk{
     
-    constructor(discount: number){
-        super(discount);
+    constructor(){
+        super(0)
     }
     
     public Price(): number {
