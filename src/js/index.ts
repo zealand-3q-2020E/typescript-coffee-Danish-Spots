@@ -1,3 +1,5 @@
+import { Cortado } from "./Cortado";
+
 interface Person {
     firstName: string;
     lastName: string;
@@ -10,3 +12,6 @@ let user: Person = { firstName: "John", lastName: "Doe" };
 
 let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
 element.innerHTML = greeter(user);
+
+let cort: Cortado =  new Cortado(5);
+console.log("Discount: " + cort.Discount + ", Price: " + cort.Price + ", MlMilk: " + cort.MlMilk + ", Strength: " + cort.Strength);
