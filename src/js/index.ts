@@ -7,6 +7,8 @@ import {IMilk} from "./IMilk"
 let menuCount: number = 0;
 let menuList: HTMLUListElement = <HTMLUListElement> document.getElementById("menuArea");
 let menuButtonCount: number = 0;
+let mT: HTMLTableElement = <HTMLTableElement> document.getElementById("menuTable");
+let orderTable: HTMLTableElement = <HTMLTableElement> document.getElementById("orderTable");
 
 interface Person {
     firstName: string;
@@ -94,3 +96,25 @@ CreateNewRowItem(cort, cort.MlMilk());
 CreateNewRowItem(latt, latt.MlMilk());
 CreateNewRowItem(bc, 0);
 CreateNewRowItem(bcNoDiscount, 0);
+
+mT.addEventListener("click", function(element){
+    let clickedElement = <HTMLInputElement>element.target;
+
+    if (element.target && clickedElement.nodeName == "BUTTON"){
+        let orderedItem: HTMLTableRowElement = <HTMLTableRowElement> clickedElement.parentElement.parentElement.cloneNode(true);
+        let orderedItemButton = orderedItem.lastElementChild.lastElementChild;
+        orderedItemButton.innerHTML = "Delete";
+        orderTable.appendChild(orderedItem);
+        console.log("element Clicked")
+    }
+    //console.log(clickedElement.nodeName);  
+});
+
+orderTable.addEventListener("click", function(element){
+    let clickedElement = <HTMLInputElement>element.target;
+
+    if (element.target && clickedElement.nodeName == "BUTTON"){
+        clickedElement.parentElement.parentElement.remove();
+    }
+
+})
